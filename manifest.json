@@ -1,0 +1,22 @@
+{
+  "browser_action": {
+    "default_icon": "run.png"
+  },
+  "description": "Parses URL markdown and external emojis in Discord",
+  "homepage_url": "https://tigerhawkt3.com",
+  "manifest_version": 2,
+  "name": "Discord parser",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "128": "run.png"
+  },
+  "content_scripts": [
+  {
+    "matches": ["*://*.discord.com/*"],
+    "js": ["discord-parse.js"]
+  }
+  ]
+}
